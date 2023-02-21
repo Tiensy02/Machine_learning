@@ -11,7 +11,7 @@ sns.set()
 iris = sns.load_dataset("iris")
 iris = iris.rename(index = str, columns = {'sepal_length':'1_sepal_length','sepal_width':'2_sepal_width', 'petal_length':'3_petal_length', 'petal_width':'4_petal_width'})
 #Plot the scatter of sepal length vs sepal width
-sns.FacetGrid(iris, hue="species", col="1_sepal_length") .map(plt.scatter,"1_sepal_length", "2_sepal_width" ) .add_legend()
+sns.FacetGrid(iris, hue="species", height=7) .map(plt.scatter,"1_sepal_length", "2_sepal_width" ) .add_legend()
 plt.title('Scatter plot')
 df1 = iris[["1_sepal_length", "2_sepal_width",'species']]
 def predict_NB_gaussian_class(X,mu_list,std_list,pi_list):
