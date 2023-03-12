@@ -57,7 +57,6 @@ y_test = results(Yt_test)
 
 X = np.array([X1_tran,X2_tran,X3_tran,X4_tran,X5_tran,X6_tran,X7_tran])
 Xbar = np.concatenate((np.ones((1, X.shape[1])), X), axis = 0)
-print(Xbar.shape[1])
 def sigmoid(s):
     return 1/(1 + np.exp(-s))
 
